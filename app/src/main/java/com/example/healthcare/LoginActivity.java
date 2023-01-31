@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(username.length()==0 || password.length()==0){
                     Toast.makeText(LoginActivity.this, "Please fill in the details!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_SHORT).show();
                 }
 
             }
