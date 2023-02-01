@@ -40,12 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = edRegEmail.getText().toString();
                 String password = edRegPassword.getText().toString();
                 String confirmPassword = edRegConfirmPassword.getText().toString();
+                Database db = new Database(getApplicationContext(), "mctech_healthcare", null , 1);
 
                 if(username.length()==0 || email.length()==0 || password.length()==0 || confirmPassword.length()==0){
                     Toast.makeText(RegisterActivity.this, "Please fill in all details!", Toast.LENGTH_SHORT).show();
                 }else {
                     if(password.compareTo(confirmPassword)==0){
                         if (isValid(password)){
+                            db.register(username, email, password);
                             Toast.makeText(RegisterActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         }else {
