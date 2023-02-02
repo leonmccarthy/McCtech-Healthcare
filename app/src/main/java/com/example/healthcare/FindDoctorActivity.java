@@ -27,7 +27,7 @@ public class FindDoctorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("title", "Family Physicians");
+                it.putExtra("title", "Family Physician");
                 startActivity(it);
             }
         });
