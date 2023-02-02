@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Find Doctor"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/yellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -183,43 +183,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SURGEON"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/yellowLight"/>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardFDietician"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/purpleDark"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/dietician"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DIETICIAN"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="@color/yellowLight"/>
