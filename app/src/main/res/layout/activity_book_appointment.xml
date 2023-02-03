@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonBABookAppintment" />
 
     <EditText
-        android:id="@+id/editTextBARegAddress"
+        android:id="@+id/editTextBAAddress"
         android:layout_width="317dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -110,7 +110,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Contact Number"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -119,7 +119,7 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBARegAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBAAddress" />
 
     <EditText
         android:id="@+id/editTextBAFee"
@@ -131,7 +131,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Fee"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
