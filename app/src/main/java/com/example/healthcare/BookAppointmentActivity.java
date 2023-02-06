@@ -77,10 +77,19 @@ public class BookAppointmentActivity extends AppCompatActivity {
             }
         });
 
+//        back function
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity( new Intent(BookAppointmentActivity.this, FindDoctorActivity.class));
+            }
+        });
+
+//        Book Appointment function
+        bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
