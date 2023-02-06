@@ -92,5 +92,12 @@ public class LabTestActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+        goToCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
