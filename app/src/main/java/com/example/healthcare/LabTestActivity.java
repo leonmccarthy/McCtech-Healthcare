@@ -96,7 +96,7 @@ public class LabTestActivity extends AppCompatActivity {
         goToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(LabTestActivity.this, CartLabActivity.class));
             }
         });
     }
