@@ -96,6 +96,17 @@ public class CartLabActivity extends AppCompatActivity {
             }
         });
 
+        checkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(CartLabActivity.this, LabTestBookActivity.class);
+                it.putExtra("price", tvTotalCost.getText());
+                it.putExtra("date", dateButton.getText());
+                it.putExtra("time", timeButton.getText());
+                startActivity(it);
+            }
+        });
+
         //        datepicker
         initDatePicker();
         dateButton.setOnClickListener(new View.OnClickListener() {
