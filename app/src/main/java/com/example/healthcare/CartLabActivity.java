@@ -70,7 +70,7 @@ public class CartLabActivity extends AppCompatActivity {
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
 
-        tvTotalCost.setText("Total Cost : $"+totalAmount);
+        tvTotalCost.setText("Total Cost : "+totalAmount);
 
         list = new ArrayList();
         for (int i=0;i<packages.length;i++){

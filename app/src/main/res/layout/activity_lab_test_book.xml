@@ -26,7 +26,7 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullname" />
 
     <TextView
         android:id="@+id/textViewLTBAppname"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.086" />
 
     <EditText
-        android:id="@+id/editTextLTBUsername"
+        android:id="@+id/editTextLTBFullname"
         android:layout_width="317dp"
         android:layout_height="55dp"
         android:layout_marginTop="44dp"
@@ -52,7 +52,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Fullname"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextLTBAddress" />
 
     <EditText
-        android:id="@+id/editTextRegisterConfirmPassword"
+        android:id="@+id/editTextLTBContact"
         android:layout_width="317dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -129,7 +129,7 @@
         android:text="Book Lab Test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterConfirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBContact" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
