@@ -22,7 +22,6 @@ public class HomeActivity extends AppCompatActivity {
         Toast.makeText(HomeActivity.this, "Welcome "+username, Toast.LENGTH_SHORT).show();
 
         CardView exit = findViewById(R.id.cardExit);
-
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,12 +40,20 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, FindDoctorActivity.class));
             }
         });
-        CardView labTest = findViewById(R.id.cardLabTest);
 
+        CardView labTest = findViewById(R.id.cardLabTest);
         labTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, LabTestActivity.class));
+            }
+        });
+
+        CardView orderDetails = findViewById(R.id.cardOrderDetails);
+        orderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, OrderDetailsActivity.class));
             }
         });
     }
