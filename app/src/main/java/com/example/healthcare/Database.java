@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class Database extends SQLiteOpenHelper {
     public Database(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -92,5 +94,23 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("carts", "where username=? and order_type=?", str);
         db.close();
+    }
+
+    public ArrayList getCartData(String username, String order_type){
+        ArrayList <String> arr = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = order_type;
+        Cursor c =db.rawQuery("select * from carts where username=? and order_type=?", str);
+        if (c.moveToFirst()){
+            do {
+                String product = c.getString(1);
+                String price = c.getString(2);
+                arr.add(product+"$"+price);
+            }while (c.moveToNext());
+        }
+        db.close();
+        return arr;
     }
 }
