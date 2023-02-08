@@ -89,10 +89,17 @@ public class BuyMedicineActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent it = new Intent(BuyMedicineActivity.this, BuyMedicineDetailsActivity.class);
-                it.putExtra("text2", packages[i][0]);
-                it.putExtra("text3", package_details[i]);
-                it.putExtra("text4", packages[i][4]);
+                it.putExtra("text1", packages[i][0]);
+                it.putExtra("text2", package_details[i]);
+                it.putExtra("text3", packages[i][4]);
                 startActivity(it);
+            }
+        });
+
+        goToCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BuyMedicineActivity.this, CartBuyMedicineActivity.class));
             }
         });
     }
