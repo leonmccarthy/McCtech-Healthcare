@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -57,7 +60,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed1.setText(fullname);
         ed2.setText(address);
         ed3.setText(contact);
-        ed4.setText(fees);
+        ed4.setText("Cons fee : $"+fees);
 
 //        datepicker
         initDatePicker();
@@ -89,7 +92,17 @@ public class BookAppointmentActivity extends AppCompatActivity {
         bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+                String username = sharedPreferences.getString("username", "").toString();
 
+                Database db = new Database(BookAppointmentActivity.this,"mctech_healthcare", null, 1);
+                if(db.checkAppointmentOrder(username, fullname, address, contact, dateButton.getText().toString(), timeButton.getText().toString())==1){
+                    Toast.makeText(BookAppointmentActivity.this, "Appointment has already been booked!", Toast.LENGTH_SHORT).show();
+                }else{
+                    db.addCartOrder(username, fullname, address, contact, "No pincode",dateButton.getText().toString(), timeButton.getText().toString(), Float.parseFloat(fees), "appointment");
+                    Toast.makeText(BookAppointmentActivity.this, "Appointment booked successfully!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(BookAppointmentActivity.this, HomeActivity.class));
+                }
             }
         });
     }
