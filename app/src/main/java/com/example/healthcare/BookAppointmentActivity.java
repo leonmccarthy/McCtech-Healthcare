@@ -96,7 +96,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
                 String username = sharedPreferences.getString("username", "").toString();
 
                 Database db = new Database(BookAppointmentActivity.this,"mctech_healthcare", null, 1);
-                if(db.checkAppointmentOrder(username, fullname, address, contact, dateButton.getText().toString(), timeButton.getText().toString())==1){
+                if(db.checkAppointmentOrder(username,title+" => "+fullname, address, contact, dateButton.getText().toString(), timeButton.getText().toString())==1){
                     Toast.makeText(BookAppointmentActivity.this, "Appointment has already been booked!", Toast.LENGTH_SHORT).show();
                 }else{
                     db.addCartOrder(username, fullname, address, contact, "No pincode",dateButton.getText().toString(), timeButton.getText().toString(), Float.parseFloat(fees), "appointment");
